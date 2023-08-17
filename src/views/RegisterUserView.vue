@@ -12,7 +12,7 @@
               <label for="sobrenome">SOBRENOME</label>
               <input type="text" id="sobrenome" placeholder="Escreva seu sobrenome" v-model="formData.sobrenome" required>
               <label for="data-nascimento">IDADE</label>
-              <input type="text" id="data-nascimento" placeholder="00/00/0000" v-model="formData.dataNascimento" required>
+              <input type="date" id="data-nascimento" placeholder="00/00/0000" v-model="formData.dataNascimento" required>
               <label for="email">E-MAIL</label>
               <input type="email" id="email" placeholder="Escreva seu e-mail" v-model="formData.email" required>
               <label for="cpf">CPF</label>
@@ -104,6 +104,7 @@ input {
   border: 1px solid rgb(119, 131, 176);
   margin-bottom: 24px;
   padding: 4px;
+  color: #fff;
 }
 input::placeholder {
   color: rgb(155, 165, 203);
