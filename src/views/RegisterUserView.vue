@@ -6,7 +6,7 @@
       <div class="col-md-6 col-12 cadastro">
           <h1>TESTE</h1>
           <p class="subtitulo">EGS SISTEMAS</p>
-          <form>
+          <div class="form">
               <label for="nome">NOME</label>
               <input type="text" id="nome" placeholder="Escreva seu nome" v-model="formData.nome" required>
               <label for="sobrenome">SOBRENOME</label>
@@ -22,7 +22,7 @@
                   <label>Aceito os termos e condições</label>
               </div>
               <button @click="addUser">ENVIAR</button>
-          </form>
+          </div>
               <p><u>I'm already a member</u></p>
       </div>
   </div>
@@ -89,7 +89,7 @@ export default {
 .subtitulo {
   color: aqua;
 }
-form {
+.form {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
