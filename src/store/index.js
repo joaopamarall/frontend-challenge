@@ -5,21 +5,14 @@ Vue.use(Vuex)
 
 export default new Vuex.Store({
   state: {
-    listaUsuarios: [{
-      nome:'',
-      sobrenome:'',
-      dataNascimento:'',
-      email:'',
-      cpf:'',
-  }] 
+    listUser: [] 
   },
   getters: {
   },
   mutations: {
-    adicionaNovaUsuario(state, novoUsuario) {
-      state.listaUsuarios.push(novoUsuario);
-    }
-
+    addNewUser(state, newUser) {
+      state.listUser.push(newUser);
+    },
   },
   actions: {
   },

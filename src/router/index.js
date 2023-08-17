@@ -11,9 +11,9 @@ const routes = [
     component: RegisterUserView
   },
   {
-    path: '/ListUserView',
-    name: 'listagem',
-    component: () => import('../views/ListUserView.vue')
+    path: '/lista-usuario',
+    name: 'lista',
+    component: () => import('../views/ListUserView')
   }
 ]
 
