@@ -18,7 +18,7 @@ Os campos necessários para preenchimento são obrigatórios e seguem a ordem ab
 
 A tela segue a estrutura abaixo:
 
-!![tela1](https://github.com/joaopamarall/frontend-challenge/assets/103014937/67c5de2a-c906-476a-9fa1-fe459b1aefd7)
+![tela1](https://github.com/joaopamarall/frontend-challenge/assets/103014937/67c5de2a-c906-476a-9fa1-fe459b1aefd7)
 
 
 - Box principal centralizado
@@ -37,7 +37,7 @@ No lado direito do menu, há a concatenação do nome e sobrenome do último cad
 
 Após enviar os campos preenchidos da tela de cadastro, os dados serão salvos na tabela conforme a imagem abaixo:
 
-!![tela2](https://github.com/joaopamarall/frontend-challenge/assets/103014937/792af116-49dc-4342-a14e-a77074a06a8a)
+![tela2](https://github.com/joaopamarall/frontend-challenge/assets/103014937/792af116-49dc-4342-a14e-a77074a06a8a)
 
 
 ---
