@@ -1,30 +1,60 @@
 <template>
   <div class="row">
-      <div class="col-md-6 d-md-flex d-none logo">
-        <img src="../assets/logo.png" class="header-logo">
+    <div class="col-md-6 d-md-flex d-none logo">
+      <img src="../assets/logo.png" class="header-logo" />
+    </div>
+    <div class="col-md-6 col-12 cadastro">
+      <h1>TESTE</h1>
+      <p class="subtitulo">Estágio Dev Front-End</p>
+      <div class="form">
+        <label for="nome">NOME</label>
+        <input
+          type="text"
+          id="nome"
+          placeholder="Escreva seu nome"
+          v-model="formData.nome"
+          required
+        />
+        <label for="sobrenome">SOBRENOME</label>
+        <input
+          type="text"
+          id="sobrenome"
+          placeholder="Escreva seu sobrenome"
+          v-model="formData.sobrenome"
+          required
+        />
+        <label for="data-nascimento">IDADE</label>
+        <input
+          type="date"
+          id="data-nascimento"
+          placeholder="00/00/0000"
+          v-model="formData.dataNascimento"
+          required
+        />
+        <label for="email">E-MAIL</label>
+        <input
+          type="email"
+          id="email"
+          placeholder="Escreva seu e-mail"
+          v-model="formData.email"
+          required
+        />
+        <label for="cpf">CPF</label>
+        <input
+          type="text"
+          id="cpf"
+          placeholder="000.000.000-00"
+          v-model="formData.cpf"
+          required
+        />
+        <div class="checkbox">
+          <input type="checkbox" v-model="aceitarTermos" required />
+          <label>Aceito os termos e condições</label>
+        </div>
+        <button @click="addUser">ENVIAR</button>
       </div>
-      <div class="col-md-6 col-12 cadastro">
-          <h1>TESTE</h1>
-          <p class="subtitulo">EGS SISTEMAS</p>
-          <div class="form">
-              <label for="nome">NOME</label>
-              <input type="text" id="nome" placeholder="Escreva seu nome" v-model="formData.nome" required>
-              <label for="sobrenome">SOBRENOME</label>
-              <input type="text" id="sobrenome" placeholder="Escreva seu sobrenome" v-model="formData.sobrenome" required>
-              <label for="data-nascimento">IDADE</label>
-              <input type="date" id="data-nascimento" placeholder="00/00/0000" v-model="formData.dataNascimento" required>
-              <label for="email">E-MAIL</label>
-              <input type="email" id="email" placeholder="Escreva seu e-mail" v-model="formData.email" required>
-              <label for="cpf">CPF</label>
-              <input type="text" id="cpf" placeholder="000.000.000-00" v-model="formData.cpf" required>
-              <div class="checkbox">
-                  <input type="checkbox" v-model="aceitarTermos" required>
-                  <label>Aceito os termos e condições</label>
-              </div>
-              <button @click="addUser">ENVIAR</button>
-          </div>
-              <p><u>I'm already a member</u></p>
-      </div>
+      <p><u>I'm already a member</u></p>
+    </div>
   </div>
 </template>
 <script>
@@ -32,14 +62,14 @@ export default {
   data() {
     return {
       formData: {
-        nome:'',
-        sobrenome:'',
-        dataNascimento:'',
-        email:'',
-        cpf:'',
+        nome: "",
+        sobrenome: "",
+        dataNascimento: "",
+        email: "",
+        cpf: "",
       },
-      aceitarTermos:false
-    }
+      aceitarTermos: false,
+    };
   },
   methods: {
     addUser() {
@@ -51,35 +81,30 @@ export default {
         this.formData.cpf &&
         this.aceitarTermos
       ) {
-        this.$store.commit('addNewUser', this.formData);
-        this.$router.push('/lista-usuario');
+        this.$store.commit("addNewUser", this.formData);
+        this.$router.push("/lista-usuario");
       } else {
-        alert('Por favor, preencha todos os campos.');
+        alert("Por favor, preencha todos os campos.");
       }
-    }
-  }
-}
+    },
+  },
+};
 </script>
 
 <style scoped>
 .logo {
-  padding: 0;
-  margin: 0 auto;
   background: linear-gradient(to right, #7afd92bc, #00f2ff);
   height: 100vh;
-  display: flex;
   justify-content: center;
   align-items: center;
 }
 .header-logo {
-    max-height: 20vh;
-    max-width: 20vh;
+  max-height: 20vh;
+  max-width: 20vh;
 }
 .cadastro {
   padding: 0;
-  margin: 0 auto;
   background-color: #30435d;
-  height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -96,7 +121,7 @@ export default {
   width: 50%;
 }
 label {
-  font-size: small;
+  font-size: 14px;
   margin-bottom: 4px;
 }
 input {
@@ -113,7 +138,12 @@ input::placeholder {
   display: flex;
   align-items: center;
   margin-bottom: 24px;
-  gap: 10px;
+  gap: 8px;
+}
+
+.checkbox label {
+  position: relative;
+  top: 3px;
 }
 .checkbox input {
   margin-bottom: 0;
